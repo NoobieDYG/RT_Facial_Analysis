@@ -63,47 +63,34 @@ RT_Facial_Analysis/
 ├── static/
 │   ├── style.css        # CSS styling
 │   └── app.js           # JavaScript functionality
-
-🚀 How to Run Locally
-⚠️ Python 3.10 is required
-Download it from: https://www.python.org/downloads/release/python-3100/
+```
+## 🚀 How to Run Locally
+ > ⚠️ Python 3.10 is required
+ > Download it from: https://www.python.org/downloads/release/python-3100/
 
 📥 1. Clone the Repository
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/NoobieDYG/RT_Facial_Analysis.git
 cd RT_Facial_Analysis
+```
 🧪 2. Create a Virtual Environment (Python 3.10)
-bash
-Copy
-Edit
+```bash
 python -m venv venv
 venv\Scripts\activate     # On Windows
-# OR
-source venv/bin/activate  # On Mac/Linux
+```
 📦 3. Install Dependencies
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
+```
 ▶️ 4. Run the App
-bash
-Copy
-Edit
+```bash
 python app.py
-Now open your browser and go to:
-
-cpp
-Copy
-Edit
-http://127.0.0.1:5000
-⚙️ How It Works
-Mode	Description
-Live Mode	Uses background thread for analysis to keep webcam feed smooth
-Demo Mode	Blocks on every 10th frame to ensure boxes are perfectly aligned
-DeepFace	Returns age, gender, and emotion for each detected face
-UI	Stats panel updates every 2 seconds with only the closest visible person
+```
+### ⚙️ How It Works
+  > Live Mode	Uses background thread for analysis to keep webcam feed smooth
+  > Demo Mode	Blocks on every 10th frame to ensure boxes are perfectly aligned
+  > DeepFace	Returns age, gender, and emotion for each detected face
+  > UI	Stats panel updates every 2 seconds with only the closest visible person
 
 
 
