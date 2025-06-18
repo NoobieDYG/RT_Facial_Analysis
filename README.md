@@ -23,4 +23,32 @@
 
 #How to run:
 *MAKE SURE YOUR PYTHON VERSION IS 3.10 IF NOT THEN DOWNLOAD FROM python.org
-```bash
+1. Clone the Repo
+   git clone https://github.com/NoobieDYG/RT_Facial_Analysis.git
+   cd RT_Facial_Analysis
+2. Create Virtual Environment (Make sure it runs on Python 3.10)
+   python -m venv venv
+   venv\\Scripts\\activate 
+3. Install Dependencies
+   pip install -r requirements.txt
+4. Run the app
+   python app.py
+
+Project Structure:
+           ├── app.py               # Flask backend
+           ├── requirements.txt     # Python dependencies
+           ├── templates/
+                      │   └── index.html       # Frontend HTML
+           ├── static/
+                      │   └── style.css 
+                      │   └── app.js
+           ├── demo.mp4             
+🧠 How It Works
+Live Mode: Captures frames from webcam and analyzes them in a background thread for smooth playback.
+Demo Mode: Plays a local video file and analyzes every 10th frame for accurate box placement.
+DeepFace: Provides age, gender, and emotion predictions.
+UI: Displays video and a stats panel updated every 2 seconds using JavaScript
+
+
+
+
