@@ -87,10 +87,10 @@ pip install -r requirements.txt
 python app.py
 ```
 ### ⚙️ How It Works
-  > Live Mode	Uses background thread for analysis to keep webcam feed smooth
-  > Demo Mode	Blocks on every 10th frame to ensure boxes are perfectly aligned
-  > DeepFace	Returns age, gender, and emotion for each detected face
-  > UI	Stats panel updates every 2 seconds with only the closest visible person
+  - Live Mode	Uses background thread for analysis to keep webcam feed smooth
+  -  Demo Mode	Blocks on every 10th frame to ensure boxes are perfectly aligned
+  -  DeepFace	Returns age, gender, and emotion for each detected face
+  -  UI	Stats panel updates every 2 seconds with only the closest visible person
 
 
 
