@@ -159,7 +159,7 @@ def video_feed():
 
 @app.route('/demo_feed')
 def demo_feed():
-    return Response(gen_video_demo("demo3.mp4"), mimetype='multipart/x-mixed-replace; boundary=frame')
+    return Response(gen_video_demo("demo.mp4"), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 
