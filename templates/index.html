@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>People Detection App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <div class="video-section">
+      <img id="video-feed" width="640" height="480" src="" alt="Video Feed">
+      <div class="btn-group">
+        <button onclick="startLive()">📹 Start Live</button>
+        <button onclick="startDemo()">🎞️ Play Demo</button>
+      </div>
+    </div>
+
+    <div class="stats-panel">
+      <h2>Live Stats</h2>
+      <div id="stats"></div>
+      <div class="download-options">
+        <button onclick="downloadLogs('json')">⬇ Download JSON</button>
+        <button onclick="downloadLogs('csv')">⬇ Download CSV</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
