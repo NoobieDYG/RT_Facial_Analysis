@@ -1,53 +1,109 @@
-#Statement : Make a simple web app to detect facial emotions of a crowd in close range
+# 🧠 Real-Time Facial Emotion Detection Web App
 
-#Solution : Made a flask based web server that uses the DEEPFACE library to analyze webcam or a demo video.
-           Used Threading in webcam to make it smooth and fucntional and a perfect sync in frame for a demo video
-           Used basic JS to fetch stats and display.
-           Has Options do download logs of every 10th frame as a csv or json file along with timestamps
-           The entire pipeline is designed to work offline after model download and supports smooth demo playback and live tracking
+> A simple web app to detect facial emotions of a crowd in close range using webcam or a demo video.
 
-#📦Features:
-  *🔍 Real-time face detection (Webcam or Demo Video)
-  *👤 Shows Age, Gender, and Emotion
-  *🎯 Filters people based on proximity (face size)
-  *📊 Live stats panel with smooth auto-updating
-  *💾 Logs downloadable as JSON or CSV
+---
 
+## 📌 Statement
 
-#TechStack: >Flask,DeepFace,HTML,CSS,JavaScript,OpenCV
+Build a simple web app that can detect **facial emotions** from a **crowd in close proximity** using a webcam or video file.
 
+---
 
-#ScreenShots: ![Screenshot 2025-06-18 105549](https://github.com/user-attachments/assets/f7cb6476-b9dc-4bfb-a01a-4e629245308e)
-             ![Screenshot 2025-06-18 090654](https://github.com/user-attachments/assets/ae3f3f2f-9f2f-4a3a-816c-0aed3f90ff4e)
-             ![Screenshot 2025-06-18 085902](https://github.com/user-attachments/assets/5946676d-1c97-4c34-83db-056f85f36e43)
+## 💡 Solution
 
-#How to run:
-*MAKE SURE YOUR PYTHON VERSION IS 3.10 IF NOT THEN DOWNLOAD FROM python.org
-1. Clone the Repo
-   git clone https://github.com/NoobieDYG/RT_Facial_Analysis.git
-   cd RT_Facial_Analysis
-2. Create Virtual Environment (Make sure it runs on Python 3.10)
-   python -m venv venv
-   venv\\Scripts\\activate 
-3. Install Dependencies
-   pip install -r requirements.txt
-4. Run the app
-   python app.py
+Created a **Flask-based web server** using the **DeepFace** library to analyze frames from a webcam or demo video.
 
-Project Structure:
-           ├── app.py               # Flask backend
-           ├── requirements.txt     # Python dependencies
-           ├── templates/
-                      │   └── index.html       # Frontend HTML
-           ├── static/
-                      │   └── style.css 
-                      │   └── app.js
-           ├── demo.mp4             
-🧠 How It Works
-Live Mode: Captures frames from webcam and analyzes them in a background thread for smooth playback.
-Demo Mode: Plays a local video file and analyzes every 10th frame for accurate box placement.
-DeepFace: Provides age, gender, and emotion predictions.
-UI: Displays video and a stats panel updated every 2 seconds using JavaScript
+### ✅ Key Highlights:
+
+- 🧵 Used threading for **smooth live webcam performance**
+- 🎞️ Achieved perfect **frame sync** for demo video playback
+- ⚙️ Built a **live stats panel** using basic JavaScript
+- 💾 Logs are saved every **10 seconds** and downloadable as `.csv` or `.json`
+- 📡 Fully **offline capable** after first-time model download
+
+---
+
+## 📦 Features
+
+- 🔍 Real-time face detection (Webcam or Demo Video)
+- 👤 Displays Age, Gender, and Emotion
+- 🎯 Proximity filtering (based on face size)
+- 📊 Auto-updating live stats panel (updated every 2s)
+- 💾 Download logs as **JSON** or **CSV**
+- 🌐 Works offline and deployable via Render
+
+---
+
+## 🛠️ Tech Stack
+
+> **Backend:** Flask, DeepFace  
+> **Frontend:** HTML, CSS, JavaScript  
+> **Libraries:** OpenCV, Numpy, Gunicorn
+
+---
+
+## 📸 Screenshots
+
+| Interface | Detection | Stats Panel |
+|-----------|-----------|-------------|
+| ![Screenshot 1](https://github.com/user-attachments/assets/f7cb6476-b9dc-4bfb-a01a-4e629245308e) | ![Screenshot 2](https://github.com/user-attachments/assets/ae3f3f2f-9f2f-4a3a-816c-0aed3f90ff4e) | ![Screenshot 3](https://github.com/user-attachments/assets/5946676d-1c97-4c34-83db-056f85f36e43) |
+
+---
+
+## 🧱 Project Structure
+
+```text
+RT_Facial_Analysis/
+├── app.py               # Flask backend
+├── requirements.txt     # Python dependencies
+├── demo.mp4             # Preloaded demo video
+├── templates/
+│   └── index.html       # Frontend HTML
+├── static/
+│   ├── style.css        # CSS styling
+│   └── app.js           # JavaScript functionality
+
+🚀 How to Run Locally
+⚠️ Python 3.10 is required
+Download it from: https://www.python.org/downloads/release/python-3100/
+
+📥 1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/NoobieDYG/RT_Facial_Analysis.git
+cd RT_Facial_Analysis
+🧪 2. Create a Virtual Environment (Python 3.10)
+bash
+Copy
+Edit
+python -m venv venv
+venv\Scripts\activate     # On Windows
+# OR
+source venv/bin/activate  # On Mac/Linux
+📦 3. Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+▶️ 4. Run the App
+bash
+Copy
+Edit
+python app.py
+Now open your browser and go to:
+
+cpp
+Copy
+Edit
+http://127.0.0.1:5000
+⚙️ How It Works
+Mode	Description
+Live Mode	Uses background thread for analysis to keep webcam feed smooth
+Demo Mode	Blocks on every 10th frame to ensure boxes are perfectly aligned
+DeepFace	Returns age, gender, and emotion for each detected face
+UI	Stats panel updates every 2 seconds with only the closest visible person
 
 
 
