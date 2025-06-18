@@ -2,10 +2,12 @@ services:
   - type: web
     name: rt-facial-detection
     env: python
-    region: oregon
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
+    buildFilter:
+      paths:
+        - .
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.12
